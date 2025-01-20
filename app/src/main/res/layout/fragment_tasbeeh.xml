@@ -23,6 +23,18 @@
 
         />
     <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/top_of_sebha"
+        app:layout_constraintTop_toBottomOf="@id/logo_islami_img"
+        app:layout_constraintBottom_toTopOf="@id/sebha_body_img"
+        app:layout_constraintStart_toStartOf="@id/sebha_body_img"
+        app:layout_constraintEnd_toEndOf="@id/sebha_body_img"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"
+        android:adjustViewBounds="true"
+        />
+    <ImageView
         android:id="@+id/sebha_body_img"
         android:layout_width="400dp"
         android:layout_height="400dp"
@@ -35,17 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/top_of_sebha"
-        app:layout_constraintTop_toBottomOf="@id/logo_islami_img"
-        app:layout_constraintBottom_toTopOf="@id/sebha_body_img"
-        app:layout_constraintStart_toStartOf="@id/sebha_body_img"
-        app:layout_constraintEnd_toEndOf="@id/sebha_body_img"
-        android:layout_marginStart="50dp"
-        android:adjustViewBounds="true"
-        />
+
     <TextView
         android:id="@+id/zekr_name_tv"
         android:layout_width="wrap_content"

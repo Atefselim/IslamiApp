@@ -1,5 +1,6 @@
 package com.example.islamiapp.fragment
 
+import android.animation.ObjectAnimator
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import com.example.islamiapp.databinding.FragmentTasbeehBinding
 class TasbeehFragment : Fragment() {
     lateinit var binding: FragmentTasbeehBinding
     private var count = 0
+    var rotationAngle = 0f
     private var zekrArray = arrayOf(
         "سُبْحَانَ اللَّهِ",
         "الْحَمْدُ لِلَّهِ",
@@ -39,9 +41,11 @@ class TasbeehFragment : Fragment() {
                 binding.zekrNameTv.text = zekrArray[nextIndex].toString()
             }
             binding.zekrCountTv.text = count.toString()
-
-
-
+            rotationAngle += 20f
+            ObjectAnimator.ofFloat(binding.sebhaBodyImg, "rotation", rotationAngle).apply {
+                duration = 300
+                start()
+            }
         }
         return binding.root
     }
