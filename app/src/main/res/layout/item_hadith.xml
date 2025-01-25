@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.carousel.MaskableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="16dp"
+
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_hadith_bg"
+   >
+
+    <ImageView
+        android:layout_margin="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/left_corner_hadith"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:adjustViewBounds="true"
+        app:layout_constraintHeight_percent=".15"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="6dp"
+        android:src="@drawable/right_corner_hadith"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".15"
+        android:adjustViewBounds="true"
+
+        />
+    <TextView
+        android:id="@+id/hadith_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="الحديث الاول"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="45dp"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        />
+    <ImageView
+        android:id="@+id/hadith_bd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/hadith_card_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:adjustViewBounds="true"
+        app:layout_constraintHeight_percent=".65"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/botto_card_bg_hadith"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:adjustViewBounds="true"
+
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/hadith_title_tv"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/hadith_description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@tools:sample/lorem/random"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.carousel.MaskableFrameLayout>

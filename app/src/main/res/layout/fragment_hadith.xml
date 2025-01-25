@@ -3,9 +3,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/hadith_bg"
     tools:context=".fragment.HadithFragment">
 
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/logo_islami_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".2"
+        app:layout_constraintWidth_percent=".7"
+        android:background="@drawable/logo_islami"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hadith_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/item_hadith"
+        app:layout_constraintTop_toBottomOf="@id/logo_islami_img"
+        app:layout_constraintBottom_toBottomOf="parent"
 
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
