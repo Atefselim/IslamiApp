@@ -13,6 +13,9 @@
         android:theme="@style/Theme.IslamiApp"
         tools:targetApi="31">
         <activity
+            android:name=".chapterdetails.ChapterDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".splash.SplashActivity"
             android:exported="true">
             <intent-filter>
